@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS for gallery layout */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-gap: 10px;
+            justify-items: center;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="admission.html">Admission</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <div class="content">
+        <h1>College Gallery</h1>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="https://www.ietdavv.edu.in/images/IIIC/SIH2022_team1.jpg" alt="Photo 1">
+            </div>
+            <div class="gallery-item">
+                <img src="https://gdsc.ietdavv.edu.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmoi2.47e82185.jpg&w=384&q=75" alt="Photo 2">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.collegedunia.com/public/college_data/images/campusimage/14320264441.jpg" alt="Photo 3">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 College Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>

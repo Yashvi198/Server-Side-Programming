@@ -1,0 +1,67 @@
+<!--Question 23. 
+Write a JavaScript program to create a slideshow that changes the displayed image when a next or previous button is clicked.-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Slideshow</title>
+    <style>
+        .slideshow-container {
+            position: relative;
+            max-width: 500px;
+            margin: auto;
+        }
+        .mySlides {
+            display: none;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+   <div class="slideshow-container">
+    <div class="mySlides">
+        <img src="image1.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <img src="image2.jpg" style="width:100%">
+    </div>
+    <button class="prev" onclick="plusSlides(-1)">❮ Previous</button>
+    <button class="next" onclick="plusSlides(1)">Next ❯</button>
+   </div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+</html>
